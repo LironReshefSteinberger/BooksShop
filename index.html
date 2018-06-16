@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="lib/bs4/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <header>
+        <h1>Welcome to my bookshop</h1>
+    </header>
+    <main class="main-container">
+        <div class="modal-container">
+            <!-- <div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-containerLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title book-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2 class="book-price"></h2>
+                            <img class="book-picture" src="" /> -->
+                            <!-- <h2 class="book-picture"></h2> -->
+                            <!-- <h2 class="book-rate"></h2>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="table-container">
+            <select class="status-filter" onchange="onSetFilter(this.value)">
+                <option value="title"></option>
+                <option value="title">Title</option>
+                <option value="price">Price (low to high)</option>
+            </select>
+            <table class="table books-table table-striped table-hover">
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="add-book">
+            <label>Book Title:</label>
+            <input class="input-book-title" type="text" placeholder="Enter book title" autofocus required/>
+            <label>Book Price:</label>
+            <input class="input-book-price" type="text" placeholder="Enter book price" required/>
+            <button class="btn btn-add" onclick="readAndAddNewBook()">Add</button>
+        </div>
+        <div class="pages-btns">
+
+        </div>
+    </main>
+
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bs4/js/bootstrap.bundle.js"></script>
+    <script src="js/general-service.js"></script>
+    <script src="js/books-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
